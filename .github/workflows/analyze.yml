@@ -20,7 +20,9 @@ jobs:
       - name: Init submodules
         run: git submodule update --init --recursive
       - name: Install dependencies
-        run: sudo apt update
+        run: |
+          sudo apt update
+          sudo apt install ninja-build
       - name: Run build-wrapper
         run: |
           mkdir build && cd build
