@@ -22,7 +22,24 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt install ninja-build
+          sudo apt install ninja-build \
+                           ffmpeg \
+                           libavcodec-dev \
+                           libavformat-dev \
+                           libavutil-dev \
+                           libswscale-dev \
+                           libevdev-dev \
+                           libusb-1.0-0-dev \
+                           libxrandr-dev \
+                           libxi-dev \
+                           libpangocairo-1.0-0 \
+                           qt6-base-private-dev \
+                           libbluetooth-dev \
+                           libasound2-dev \
+                           libpulse-dev \
+                           libgl1-mesa-dev \
+                           libudev-dev \
+                           libsystemd-dev \
       - name: Run build-wrapper
         run: |
           mkdir build && cd build
